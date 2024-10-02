@@ -9,7 +9,7 @@ def handle_start(message):
     bot.send_message(message.chat.id, kol.startAnswer)
 
 # Обработчик сообщений, содержащих команду /request или ключевое слово
-@bot.message_handler(func=lambda message: message.text and ('/request' in message.text or 'шерсть' in message.text.lower()))
+@bot.message_handler(func=lambda message: message.text and ('/meh' in message.text or 'шерсть' in message.text.lower()))
 def handle_request(message):
     bot.send_message(message.chat.id, kol.random_message())
 
